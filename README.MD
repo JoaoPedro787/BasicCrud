@@ -1,7 +1,3 @@
-Here’s the updated version of your README with the added warning about the potential expiration of the database server for the live demo:
-
----
-
 # API with Node.js, Express, and MySQL  
 ### This project consists of a basic API developed with Node.js, Express, and MySQL, integrated with a React JS frontend.
 
