@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+td,th{
+    padding: 1rem;
+}
+
+th{
+    text-align: left;
+}
+
+input[type=checkbox]{
+    cursor: pointer;
+}
