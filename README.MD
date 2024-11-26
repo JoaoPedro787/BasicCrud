@@ -99,6 +99,7 @@ This project was developed with a primary focus on enhancing my skills and knowl
       DB_USER=root
       DB_PASS=yourpassword
       DB_NAME=nodeAPI
+      DB_PORT=5000
       ```
 
 4. Start the project:
