@@ -10,9 +10,6 @@ const TableBody = ({ data, isChecked, refreshPage }) => {
   // Array das ações
   const { actionsData } = HandleReq(refreshPage);
 
-  // Capturar ID do usuário
-  let userId;
-
   // Checkbox
   const HandleChange = (evt, index) => {
     const check = evt.target.checked;
@@ -40,14 +37,9 @@ const TableBody = ({ data, isChecked, refreshPage }) => {
           </td>
 
           {/* Mapeia valores do objeto do usuário */}
-          {(() => {
-            const userValues = Object.values(el); // Armazena os valores do usuário
-            userId = el.id; // Armazenando ID
-
-            return userValues.map((item, colIndex) => (
-              <td key={colIndex}>{item}</td>
-            ));
-          })()}
+          {Object.values(el).map((item, colIndex) => (
+            <td key={colIndex}>{item}</td>
+          ))}
 
           {/* Actions */}
           <td className="flex justify-center gap-6">
@@ -58,7 +50,7 @@ const TableBody = ({ data, isChecked, refreshPage }) => {
                   hover:scale-125 hover:opacity-60
                   active:opacity-100 active:-translate-y-2
                 `}
-                onClick={() => openModal(item.function(userId))}
+                onClick={() => openModal(item.function(el.id))}
               >
                 {item.icon}
               </span>

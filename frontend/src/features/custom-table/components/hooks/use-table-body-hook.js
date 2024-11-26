@@ -9,11 +9,13 @@ const HandleReq = (setRefresh) => {
 
     // Chamadas API
     const handleDelete = async (id) => {
+        console.log(id)
         const { error } = await to(DeleteUser(id));
         return error ? alert(error.message) : setRefresh(true);
     };
 
     const handleUpdate = async (id, password) => {
+        console.log(id)
         const { error } = await to(UpdateUser(id, { password: password[0] }));
         return error ? alert(error.message) : setRefresh(true);
     };
