@@ -21,6 +21,7 @@ const getAllUsersController = async (_req, res, next) => {
     const { error, data } = await to(getAllUsers());
 
     if (error) {
+        console.log(error.message)
         return next(new NotFound('Users not found.'))
     }
 
