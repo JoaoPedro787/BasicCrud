@@ -120,19 +120,19 @@ DB_HOST=localhost
     ### Backend
     
 
-bash
+```bash
     cd backend
     npm start
-
+```
 
     ---
     ### Frontend
     
 
-bash
+```bash
     cd frontend
     npm start
-
+```
 
 
 5. Open the project in your browser:
